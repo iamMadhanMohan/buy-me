@@ -1,0 +1,50 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  overflow-x: hidden;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.214);
+  transition: all ease-in 0.2s;
+}
+
+.sidebar .menu-icon {
+  display: flex;
+  justify-content: end;
+  padding: 0.6rem 1rem 0 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sidebar a {
+  color: var(--sub-heading);
+  text-decoration: none;
+  text-transform: capitalize;
+
+  /* display: block; */
+  padding: 0.5rem 1rem;
+
+  border-bottom: 1px solid var(--silver-color);
+}
+
+.sidebar p {
+  font-weight: 500;
+  color: var(--heading);
+  text-transform: uppercase;
+  padding: 2rem 3rem 1rem 1rem;
+}
+
+.sidebar a:hover {
+  transform: translateX(10px);
+  transition: all ease-in 0.2s;
+}
+
+.sidebar-hide {
+  margin-left: -13rem;
+  transition: all ease-in 0.2s;
+}
