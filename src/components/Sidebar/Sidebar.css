@@ -21,25 +21,25 @@
   cursor: pointer;
 }
 
-.sidebar a {
+.sidebar p {
   color: var(--sub-heading);
   text-decoration: none;
   text-transform: capitalize;
 
-  /* display: block; */
   padding: 0.5rem 1rem;
+  cursor: pointer;
 
   border-bottom: 1px solid var(--silver-color);
 }
 
-.sidebar p {
+.sidebar .sub-heading {
   font-weight: 500;
   color: var(--heading);
   text-transform: uppercase;
   padding: 2rem 3rem 1rem 1rem;
 }
 
-.sidebar a:hover {
+.sidebar p:hover {
   transform: translateX(10px);
   transition: all ease-in 0.2s;
 }

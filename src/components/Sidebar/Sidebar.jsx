@@ -1,6 +1,7 @@
+import { useDispatch } from "react-redux";
 import "./Sidebar.css";
-import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { addCategory } from "../../Slices/CategoryProductsSlice";
 
 const menuItems = [
   "smartphones",
@@ -26,14 +27,24 @@ const menuItems = [
 ];
 
 const Sidebar = ({ setMenu, menuStatus }) => {
-  const menu = menuItems.map((item) => <NavLink to={item}>{item}</NavLink>);
+  const dispatch = useDispatch();
+
+  const handleClick = (item) => {
+    dispatch(addCategory(item));
+  };
+
+  const menu = menuItems.map((item, index) => (
+    <p onClick={() => handleClick(item)} key={index}>
+      {item}
+    </p>
+  ));
 
   return (
     <div className={menuStatus ? "sidebar" : "sidebar sidebar-hide"}>
       <div className="menu-icon">
         <GiHamburgerMenu onClick={() => setMenu(false)} />
       </div>
-      <p>All Categories</p>
+      <p className="sub-heading">All Categories</p>
       {menu}
     </div>
   );

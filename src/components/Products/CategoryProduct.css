@@ -1,0 +1,23 @@
+.category-product {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.products-components {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category-product .heading {
+  background-color: white;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-left: 8px solid var(--primary-color);
+  margin-top: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.025);
+
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--sub-heading);
+}

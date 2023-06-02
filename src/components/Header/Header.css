@@ -90,6 +90,7 @@
 .navbar {
   background-color: var(--text-color);
   color: white;
+  overflow: hidden;
 }
 
 .navbar p {
