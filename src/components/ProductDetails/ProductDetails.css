@@ -1,0 +1,140 @@
+.product-details {
+  width: 1200px;
+  height: 400px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  color: var(--paragraph);
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details .product-left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-left img {
+  height: 100%;
+  width: 500px;
+  object-fit: contain;
+  padding: 1rem 0;
+}
+
+.arrow-button {
+  font-size: 2.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.173);
+}
+
+.arrow-button:hover {
+  color: var(--sub-heading);
+}
+
+.right {
+  /* border: 2px solid black; */
+  height: 100%;
+}
+
+.right .product-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--heading);
+  margin: 2.2rem 0 0.5rem 0;
+}
+
+.flex-div {
+  display: flex;
+  font-size: 0.9rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.details {
+  color: var(--sub-heading);
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+}
+
+.details2 {
+  color: var(--sub-heading);
+  margin: 0.2rem 1rem 0 0;
+  text-align: justify;
+}
+
+.flex-div .actual-price {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.flex-div .final-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--heading);
+  margin-right: 0.5rem;
+}
+
+.flex-div .discount {
+  background-color: var(--primary-color);
+  color: var(--heading);
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.flex-div .quantity {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--sub-heading);
+}
+
+.decrease-button,
+.increase-button {
+  color: black;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.buttons-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.primary-color {
+  color: var(--primary-color);
+}
+
+.add-cart-button {
+  background-color: white;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  padding: 0.25rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buy-now-button {
+  background-color: var(--primary-color);
+  outline: none;
+  border: 2px solid var(--primary-color);
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}

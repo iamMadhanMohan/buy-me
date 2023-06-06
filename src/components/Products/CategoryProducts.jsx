@@ -7,7 +7,6 @@ const CategoryProducts = () => {
   const category = useSelector((state) => state.category.category);
 
   let productComponent;
-  console.log(apiData);
 
   if (category.length > 0) {
     const filteredData = apiData.filter((item) => item.category == category);
@@ -21,6 +20,7 @@ const CategoryProducts = () => {
         rating={item.rating}
         brand={item.brand}
         thumbnail={item.thumbnail}
+        data={item}
       />
     ));
   }

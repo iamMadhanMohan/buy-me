@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import "./Sidebar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { addCategory } from "../../Slices/CategoryProductsSlice";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   "smartphones",
@@ -35,7 +36,9 @@ const Sidebar = ({ setMenu, menuStatus }) => {
 
   const menu = menuItems.map((item, index) => (
     <p onClick={() => handleClick(item)} key={index}>
-      {item}
+      <Link to={`/category/${item}`} className="link">
+        {item}
+      </Link>
     </p>
   ));
 

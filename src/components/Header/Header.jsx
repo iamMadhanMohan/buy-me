@@ -3,6 +3,7 @@ import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillHandbagFill } from "react-icons/bs";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const Header = ({ setMenu }) => {
   return (
@@ -16,7 +17,9 @@ const Header = ({ setMenu }) => {
             <div>
               <BsFillHandbagFill />
             </div>
-            <h1>BuyMe</h1>
+            <Link to="/home" className="link">
+              <h1>BuyMe</h1>
+            </Link>
           </div>
         </div>
         <div className="search-bar">
