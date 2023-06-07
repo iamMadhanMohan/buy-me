@@ -1,11 +1,12 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./ProductDetails.css";
 import {
   BsArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
 
-import { BiPlusCircle, BiMinusCircle } from "react-icons/bi";
+import { addProduct } from "../../Slices/CartSlice";
+
 import { useState } from "react";
 
 const discountPriceCalculator = (actualPrice, discountPercentage) => {
@@ -15,6 +16,8 @@ const discountPriceCalculator = (actualPrice, discountPercentage) => {
 
 const ProductDetails = () => {
   const productData = useSelector((state) => state.product);
+  const dispatch = useDispatch();
+
   const [imageURL, setImageURL] = useState(productData.images[0]);
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -35,6 +38,17 @@ const ProductDetails = () => {
       setImageIndex((prev) => prev + 1);
       setImageURL(productData.images[imageIndex]);
     }
+  };
+
+  const handleAddToCart = () => {
+    dispatch(
+      addProduct({
+        ...productData,
+        quantity: 1,
+        totalPrice: afterDiscountPrice,
+        unitPrice: afterDiscountPrice,
+      })
+    );
   };
 
   return (
@@ -85,20 +99,9 @@ const ProductDetails = () => {
           <p className="discount">{productData.discountPercentage}% off</p>
         </div>
 
-        <div className="flex-div margin-bottom">
-          <p>Quantity: </p>
-          <div className="buttons-div"></div>
-          <div className="decrease-button">
-            <BiMinusCircle />
-          </div>
-
-          <p className="quantity">12</p>
-
-          <div className="increase-button">
-            <BiPlusCircle />
-          </div>
-        </div>
-        <button className="add-cart-button">Add To Cart</button>
+        <button className="add-cart-button" onClick={handleAddToCart}>
+          Add To Cart
+        </button>
         <button className="buy-now-button">Buy Now</button>
       </div>
     </div>

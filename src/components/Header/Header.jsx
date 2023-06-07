@@ -4,8 +4,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillHandbagFill } from "react-icons/bs";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = ({ setMenu }) => {
+  const cartData = useSelector((state) => state.cart.cart);
+  const cartItems = cartData.length;
   return (
     <div>
       <div className="header">
@@ -28,9 +31,11 @@ const Header = ({ setMenu }) => {
             <FaSearch />
           </div>
         </div>
-        <div className="cart">
-          <FaShoppingCart />
-          <p>12</p>
+        <div className="link cart">
+          <Link to="/cart">
+            <FaShoppingCart />
+          </Link>
+          <p>{cartItems}</p>
         </div>
       </div>
       <Navbar />

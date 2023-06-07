@@ -74,6 +74,10 @@
   margin: 1rem;
 }
 
+.cart a {
+  color: var(--text-color);
+}
+
 .cart p {
   background-color: red;
   font-size: 10px;
