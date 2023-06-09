@@ -1,24 +1,38 @@
 .cart-component {
-  width: 1200px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
-.table-head {
+.table {
+  overflow: hidden;
+  table-layout: auto;
+  border-collapse: collapse;
+  white-space: nowrap;
+  margin: auto;
+  overflow-x: auto;
+
   background-color: white;
-  display: flex;
-  justify-content: space-around;
-  margin: 1rem 0;
-  padding: 0.5rem 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.025);
-  color: var(--heading);
+  width: 90%;
+  margin-top: 2rem;
 }
 
-.cart-item {
-  display: flex;
-  justify-content: space-around;
-  background-color: white;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgb(214, 211, 211);
+.table thead {
+  background-color: #ccc;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem;
+}
+
+.table td {
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table tbody tr:hover {
+  background-color: whitesmoke;
 }
 
 .quantity {
@@ -47,16 +61,12 @@
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.cart-item .delete-button:hover {
+.delete-button:hover {
   color: var(--primary-color);
   cursor: pointer;
-}
-
-.cart-item .delete-button:active {
-  transform: scale(0.8);
 }
 
 .check-out-div {
@@ -65,7 +75,7 @@
   align-items: center;
   padding: 2rem 5rem;
   background-color: white;
-  margin: 1rem 0;
+  margin: 2rem 0;
   font-size: 0.9rem;
 }
 
@@ -108,8 +118,4 @@
 
 .display-none {
   display: none;
-}
-
-.hide {
-  visibility: hidden;
 }

@@ -5,7 +5,7 @@
   background-color: white;
   height: 100vh;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   overflow-x: hidden;
 

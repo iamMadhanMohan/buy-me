@@ -5,10 +5,25 @@ import { BsFillHandbagFill } from "react-icons/bs";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const Header = ({ setMenu }) => {
   const cartData = useSelector((state) => state.cart.cart);
+  const products = useSelector((state) => state.apiData.products);
   const cartItems = cartData.length;
+
+  const [search, setSearch] = useState();
+  const [result, setResult] = useState([]);
+
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+    setResult(
+      products.filter((item) =>
+        item.title.toLowerCase().includes(event.target.value)
+      )
+    );
+  };
+
   return (
     <div>
       <div className="header">
@@ -26,10 +41,22 @@ const Header = ({ setMenu }) => {
           </div>
         </div>
         <div className="search-bar">
-          <input type="text" />
+          <input
+            type="text"
+            placeholder="type here"
+            onChange={handleChange}
+            value={search}
+          />
           <div className="search-icon">
             <FaSearch />
           </div>
+          {search && (
+            <div className="search-filter">
+              {result.map((item) => (
+                <p>{item.title}</p>
+              ))}
+            </div>
+          )}
         </div>
         <div className="link cart">
           <Link to="/cart">

@@ -32,6 +32,7 @@ const Sidebar = ({ setMenu, menuStatus }) => {
 
   const handleClick = (item) => {
     dispatch(addCategory(item));
+    setMenu(!menuStatus);
   };
 
   const menu = menuItems.map((item, index) => (
