@@ -14,10 +14,12 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Home from "./components/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
+import SearchResults from "./components/SearchResults/SearchResults";
+import Layout from "./components/Layout";
 
 function App() {
   const dispatch = useDispatch();
-  const productData = useSelector((state) => state.product);
+  // const productData = useSelector((state) => state.product);
 
   useEffect(() => {
     axios.get("https://dummyjson.com/products?limit=0").then((res) => {
@@ -31,18 +33,16 @@ function App() {
     <div className="App">
       <Header setMenu={setMenu} />
       <Sidebar setMenu={setMenu} menuStatus={menu} />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-
-        <Route path="/category/:id" element={<CategoryProducts />} />
-
-        <Route path="/products/:id" element={<ProductDetails />} />
-
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="category/:name" element={<CategoryProducts />} />
+          <Route path="product/:id" element={<ProductDetails />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="search" element={<SearchResults />} />
+        </Route>
       </Routes>
-
-      {/* {Object.keys(productData).length > 0 && } */}
     </div>
   );
 }

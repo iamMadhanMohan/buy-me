@@ -1,15 +1,17 @@
+import { useParams } from "react-router-dom";
 import "./CategoryProduct.css";
 import Product from "./Product";
 import { useSelector } from "react-redux";
 
 const CategoryProducts = () => {
   const apiData = useSelector((state) => state.apiData.products);
-  const category = useSelector((state) => state.category.category);
+  const { name: category } = useParams();
 
-  let productComponent;
+  let productComponent = [];
+  let filteredData;
 
-  if (category.length > 0) {
-    const filteredData = apiData.filter((item) => item.category == category);
+  if (apiData != undefined) {
+    filteredData = apiData.filter((item) => item.category == category);
 
     productComponent = filteredData.map((item) => (
       <Product
@@ -27,7 +29,7 @@ const CategoryProducts = () => {
 
   return (
     <div className="category-product">
-      <h1 className="heading">{category}</h1>
+      {productComponent.length > 0 && <h1 className="heading">{category}</h1>}
       <div className="products-components">{productComponent}</div>
     </div>
   );

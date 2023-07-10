@@ -1,5 +1,5 @@
 .product-details {
-  width: 1200px;
+  width: 80vw;
   height: 400px;
   margin: 2rem auto;
   display: flex;
@@ -144,4 +144,31 @@
 
 .show {
   visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .product-details {
+    width: 90vw;
+    height: fit-content;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--paragraph);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-left img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+    padding: 1rem 0;
+  }
+
+  .right {
+    padding: 0.5rem 1rem;
+  }
 }

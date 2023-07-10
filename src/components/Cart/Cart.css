@@ -119,3 +119,45 @@
 .display-none {
   display: none;
 }
+
+@media (max-width: 800px) {
+  .cart-component {
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .table {
+    overflow: hidden;
+    table-layout: auto;
+    border-collapse: collapse;
+    white-space: wrap;
+    margin: auto;
+    overflow-x: auto;
+
+    background-color: white;
+    width: 90vw;
+    margin-top: 2rem;
+
+    font-size: 0.5rem;
+  }
+
+  .check-out-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90vw;
+    margin: 2rem auto;
+    font-size: 0.7rem;
+    background-color: white;
+  }
+
+  .payment-div {
+    height: fit-content;
+    width: 90vw;
+
+    font-size: 0.8rem;
+    padding: 2rem;
+  }
+}

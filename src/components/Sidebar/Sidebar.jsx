@@ -1,8 +1,8 @@
-import { useDispatch } from "react-redux";
-import "./Sidebar.css";
+// import { useDispatch } from "react-redux";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { addCategory } from "../../Slices/CategoryProductsSlice";
-import { Link } from "react-router-dom";
+// import { addCategory } from "../../Slices/CategoryProductsSlice";
+import "./Sidebar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const menuItems = [
   "smartphones",
@@ -28,18 +28,19 @@ const menuItems = [
 ];
 
 const Sidebar = ({ setMenu, menuStatus }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  let navigate = useNavigate();
 
   const handleClick = (item) => {
-    dispatch(addCategory(item));
+    navigate(`/category/${item}`);
     setMenu(!menuStatus);
   };
 
   const menu = menuItems.map((item, index) => (
     <p onClick={() => handleClick(item)} key={index}>
-      <Link to={`/category/${item}`} className="link">
-        {item}
-      </Link>
+      {/* <Link to={`/category/${item}`} className="link"> */}
+      {item}
+      {/* </Link> */}
     </p>
   ));
 

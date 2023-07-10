@@ -7,3 +7,12 @@
   text-decoration: none;
   color: var(--sub-heading);
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
