@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buy-me/static/css/main.34a8d65e.css",
+    "main.js": "/buy-me/static/js/main.b91fd3dd.js",
+    "index.html": "/buy-me/index.html",
+    "main.34a8d65e.css.map": "/buy-me/static/css/main.34a8d65e.css.map",
+    "main.b91fd3dd.js.map": "/buy-me/static/js/main.b91fd3dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34a8d65e.css",
+    "static/js/main.b91fd3dd.js"
+  ]
+}
