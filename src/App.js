@@ -19,7 +19,6 @@ import Layout from "./components/Layout";
 
 function App() {
   const dispatch = useDispatch();
-  // const productData = useSelector((state) => state.product);
 
   useEffect(() => {
     axios.get("https://dummyjson.com/products?limit=0").then((res) => {
