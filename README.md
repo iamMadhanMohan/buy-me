@@ -10,7 +10,6 @@ This is an E-commerce web application. It is developed using `Dummy JSON API` an
 
 ## 🔨Tools & Technologies
 
----
 
 - HTML
 - CSS
@@ -24,7 +23,6 @@ This is an E-commerce web application. It is developed using `Dummy JSON API` an
 
 ## ⛳Features
 
----
 
 - Responsive.
 - Cart feature.
@@ -35,7 +33,6 @@ This is an E-commerce web application. It is developed using `Dummy JSON API` an
 
 ## Installation steps
 
----
 
 Want to try it in your local system? Then follow the below steps.
 
@@ -58,7 +55,6 @@ npm start
 
 ## Screenshots
 
----
 
 Some of the screenshots of this application are attached below.
 
@@ -70,7 +66,6 @@ Some of the screenshots of this application are attached below.
 
 ## Thank you for checking
 
----
 
 #### Give a 🌟Star if you like my project.
 
